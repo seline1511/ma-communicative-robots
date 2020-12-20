@@ -1,0 +1,577 @@
+@prefix kinship1: <http://www.semanticweb.org/combots#> .
+@prefix ns1: <http://www.semanticweb.org/combots#Mrs._Verhoeven'> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+kinship1:Big_Nosed_Rachel kinship1:has_Parents kinship1:Fat_Monica .
+
+kinship1:Dr._Green kinship1:has_Dauter kinship1:Ross .
+
+kinship1:Joanne kinship1:has_Dad kinship1:Kiki .
+
+kinship1:Joshua kinship1:has_Parents kinship1:Rachel .
+
+kinship1:Pizza_Guy kinship1:has_Dad kinship1:Monica .
+
+kinship1:Tom kinship1:has_Mom kinship1:Rachel .
+
+kinship1:has_Child a kinship1:IrreflexiveProperty .
+
+kinship1:has_Sibling a kinship1:SymmetricProperty .
+
+kinship1:has_daughter a kinship1:IrreflexiveProperty .
+
+kinship1:has_parent a kinship1:IrreflexiveProperty .
+
+kinship1:Angela kinship1:has_Brother kinship1:Monica ;
+    kinship1:has_Sibling kinship1:Monica ;
+    kinship1:has_Sister kinship1:Monica ;
+    rdfs:domain kinship1:man .
+
+kinship1:Danny kinship1:has_Sister kinship1:Rachel .
+
+kinship1:Dennis_Phillips kinship1:has_Child kinship1:Chandler ;
+    kinship1:has_Son kinship1:Chandler ;
+    kinship1:has_daughter kinship1:Chandler ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Doug kinship1:has_Mother kinship1:Chandler .
+
+kinship1:Dr._Harad kinship1:has_parent kinship1:Frank ;
+    rdfs:domain kinship1:man .
+
+kinship1:Dr._Leedbetter kinship1:has_Brother kinship1:Ross ;
+    kinship1:has_Sibling kinship1:Ross ;
+    kinship1:has_Sister kinship1:Ross ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Elizabeth kinship1:has_Dad kinship1:Rachel ;
+    kinship1:has_Father kinship1:Ross .
+
+kinship1:Frannie kinship1:has_Brother kinship1:Monica ;
+    kinship1:has_Sibling kinship1:Monica ;
+    kinship1:has_Sister kinship1:Monica ;
+    rdfs:domain kinship1:man .
+
+kinship1:Janine kinship1:has_Brother kinship1:Ross ;
+    kinship1:has_Sibling kinship1:Ross ;
+    kinship1:has_Sister kinship1:Ross ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Jill kinship1:has_Brother kinship1:Rachel ;
+    kinship1:has_Dauter kinship1:Rachel ;
+    kinship1:has_Sibling kinship1:Rachel ;
+    kinship1:has_Sister kinship1:Rachel ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Kathy kinship1:has_Aunt kinship1:Chandler ;
+    kinship1:has_Child kinship1:Chandler ;
+    kinship1:has_Mom kinship1:Chandler,
+        kinship1:Joey ;
+    kinship1:has_Son kinship1:Chandler ;
+    kinship1:has_daughter kinship1:Chandler ;
+    rdfs:domain kinship1:man .
+
+kinship1:Katie kinship1:has_Father kinship1:Ross ;
+    kinship1:has_Mother kinship1:Ross ;
+    kinship1:has_parent kinship1:Ross ;
+    rdfs:domain kinship1:man .
+
+kinship1:Lydia kinship1:has_Child kinship1:Joey ;
+    kinship1:has_Son kinship1:Joey ;
+    kinship1:has_daughter kinship1:Joey ;
+    rdfs:domain kinship1:man .
+
+kinship1:MNCA kinship1:has_Sibling kinship1:ROSS ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Mr._Waltham kinship1:has_Niece kinship1:Rachel .
+
+kinship1:Mrs._Green kinship1:has_Dauter kinship1:Monica .
+
+kinship1:Mrs._Tribbiani kinship1:has_Father kinship1:Joey .
+
+ns1:s_Daughter kinship1:has_Mother kinship1:Ross .
+
+kinship1:Nurse kinship1:has_Brother kinship1:Phoebe ;
+    kinship1:has_Sibling kinship1:Phoebe ;
+    kinship1:has_Sister kinship1:Phoebe ;
+    rdfs:domain kinship1:man .
+
+kinship1:Pete kinship1:has_Brother kinship1:Phoebe ;
+    kinship1:has_Sibling kinship1:Phoebe ;
+    kinship1:has_Sister kinship1:Phoebe ;
+    rdfs:domain kinship1:man .
+
+kinship1:ROSS kinship1:has_Sister kinship1:MNCA .
+
+kinship1:Susan kinship1:has_Father kinship1:Ross ;
+    kinship1:has_Mother kinship1:Ross ;
+    kinship1:has_parent kinship1:Ross ;
+    rdfs:domain kinship1:man .
+
+kinship1:Tag kinship1:has_Sister kinship1:Rachel .
+
+kinship1:Terry kinship1:has_Child kinship1:Rachel ;
+    kinship1:has_Son kinship1:Rachel ;
+    kinship1:has_daughter kinship1:Rachel ;
+    rdfs:domain kinship1:man .
+
+kinship1:Tina kinship1:has_Brother kinship1:Joey ;
+    kinship1:has_Sibling kinship1:Joey ;
+    kinship1:has_Sister kinship1:Joey ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Carol kinship1:has_Child kinship1:Phoebe ;
+    kinship1:has_Son kinship1:Phoebe ;
+    kinship1:has_daughter kinship1:Phoebe ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Dina kinship1:has_Brother kinship1:Joey ;
+    kinship1:has_Dad kinship1:Joey ;
+    kinship1:has_Mom kinship1:Joey ;
+    kinship1:has_Sibling kinship1:Joey ;
+    kinship1:has_Sister kinship1:Joey ;
+    kinship1:has_Uncle kinship1:Joey ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Earl kinship1:has_Child kinship1:Phoebe ;
+    kinship1:has_Son kinship1:Phoebe ;
+    kinship1:has_daughter kinship1:Phoebe ;
+    rdfs:domain kinship1:woman .
+
+<http://www.semanticweb.org/combots#Frank_Sr.> kinship1:has_Father kinship1:Phoebe .
+
+kinship1:Janice kinship1:has_Father kinship1:Rachel .
+
+kinship1:Malcom kinship1:has_Brother kinship1:Phoebe ;
+    kinship1:has_Sibling kinship1:Phoebe ;
+    kinship1:has_Sister kinship1:Phoebe ;
+    kinship1:has_twin kinship1:Phoebe ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Mrs._Bing kinship1:has_Son kinship1:All,
+        kinship1:Chandler .
+
+kinship1:Mrs._Geller kinship1:has_Father kinship1:Ross ;
+    kinship1:has_Mother kinship1:Ross ;
+    kinship1:has_parent kinship1:Ross .
+
+kinship1:Richard kinship1:has_Sister kinship1:Monica .
+
+kinship1:Ursula kinship1:has_Brother kinship1:Phoebe ;
+    kinship1:has_Mom kinship1:Phoebe ;
+    kinship1:has_Sibling kinship1:Phoebe ;
+    kinship1:has_Sister kinship1:Phoebe ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Ben kinship1:has_Father kinship1:Ross ;
+    kinship1:has_Mother kinship1:Ross ;
+    kinship1:has_parent kinship1:Ross ;
+    rdfs:domain kinship1:man .
+
+kinship1:Emily kinship1:has_Brother kinship1:Ross ;
+    kinship1:has_Father kinship1:Ross ;
+    kinship1:has_Mother kinship1:Ross ;
+    kinship1:has_Parents kinship1:Ross ;
+    kinship1:has_Sibling kinship1:Ross ;
+    kinship1:has_Sister kinship1:Ross ;
+    kinship1:has_Uncle kinship1:Ross ;
+    kinship1:has_parent kinship1:Ross ;
+    rdfs:domain kinship1:man,
+        kinship1:woman .
+
+kinship1:Paul kinship1:has_Brother kinship1:Monica ;
+    kinship1:has_Dad kinship1:Chandler ;
+    kinship1:has_Dauter kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Mom kinship1:Chandler ;
+    kinship1:has_Mother kinship1:Rachel ;
+    kinship1:has_Parents kinship1:Rachel ;
+    kinship1:has_Sibling kinship1:Monica ;
+    kinship1:has_Sister kinship1:Monica ;
+    rdfs:domain kinship1:man .
+
+kinship1:Eric kinship1:has_Brother kinship1:Phoebe ;
+    kinship1:has_Sibling kinship1:Phoebe ;
+    kinship1:has_Sister kinship1:Chandler,
+        kinship1:Phoebe ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Frank kinship1:has_Brother kinship1:Phoebe ;
+    kinship1:has_Children kinship1:Frank ;
+    kinship1:has_Sibling kinship1:Phoebe ;
+    kinship1:has_Sister kinship1:Phoebe ;
+    kinship1:has_Son kinship1:Dr._Harad ;
+    rdfs:domain kinship1:man .
+
+kinship1:All kinship1:has_Brother kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Father kinship1:Ross ;
+    kinship1:has_Mother kinship1:Ross ;
+    kinship1:has_Sibling kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Sister kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_parent kinship1:Mrs._Bing,
+        kinship1:Ross ;
+    rdfs:domain kinship1:man,
+        kinship1:woman .
+
+kinship1:Mr._Geller kinship1:has_Child kinship1:Mr._Geller,
+        kinship1:Ross ;
+    kinship1:has_Mother kinship1:Monica,
+        kinship1:Mr._Geller ;
+    kinship1:has_Son kinship1:Mr._Geller,
+        kinship1:Ross ;
+    kinship1:has_daughter kinship1:Mr._Geller,
+        kinship1:Ross ;
+    rdfs:domain kinship1:man,
+        kinship1:woman .
+
+kinship1:Joey kinship1:has_Brother kinship1:Chandler,
+        kinship1:Joey,
+        kinship1:Monica,
+        kinship1:Phoebe,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Child kinship1:Mrs._Tribbiani,
+        kinship1:Rachel ;
+    kinship1:has_Dad kinship1:All,
+        kinship1:Chandler,
+        kinship1:Joey,
+        kinship1:Rachel,
+        kinship1:Ronni,
+        kinship1:Ross ;
+    kinship1:has_Father kinship1:Lydia,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Mom kinship1:Chandler,
+        kinship1:Monica ;
+    kinship1:has_Mother kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Parents kinship1:Monica,
+        kinship1:Phoebe,
+        kinship1:Rachel ;
+    kinship1:has_Sibling kinship1:Dina,
+        kinship1:Joey,
+        kinship1:Monica,
+        kinship1:Phoebe,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Sister kinship1:Chandler,
+        kinship1:Dina,
+        kinship1:Joey,
+        kinship1:Monica,
+        kinship1:Phoebe,
+        kinship1:Rachel,
+        kinship1:Ross,
+        kinship1:Tina ;
+    kinship1:has_Sisters kinship1:Rachel ;
+    kinship1:has_Son kinship1:Rachel ;
+    kinship1:has_daughter kinship1:Rachel ;
+    kinship1:has_parent kinship1:Monica,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_twin kinship1:Chandler,
+        kinship1:Phoebe,
+        kinship1:Ross ;
+    rdfs:domain kinship1:man,
+        kinship1:woman .
+
+kinship1:Chandler kinship1:has_Brother kinship1:Joey,
+        kinship1:Monica,
+        kinship1:Phoebe,
+        kinship1:Ross ;
+    kinship1:has_Child kinship1:Doug,
+        kinship1:Monica,
+        kinship1:Phoebe ;
+    kinship1:has_Cousin kinship1:Monica,
+        kinship1:Phoebe,
+        kinship1:Ross ;
+    kinship1:has_Dad kinship1:Janice,
+        kinship1:Monica,
+        kinship1:Ross ;
+    kinship1:has_Father kinship1:Kathy,
+        kinship1:Monica,
+        kinship1:Rachel ;
+    kinship1:has_Mom kinship1:Monica,
+        kinship1:Phoebe,
+        kinship1:Ross ;
+    kinship1:has_Mother kinship1:Dennis_Phillips,
+        kinship1:Ross ;
+    kinship1:has_Parents kinship1:Monica,
+        kinship1:Phoebe,
+        kinship1:Rachel,
+        kinship1:Richard,
+        kinship1:Ross ;
+    kinship1:has_Sibling kinship1:Eric,
+        kinship1:Joey,
+        kinship1:Monica,
+        kinship1:Phoebe,
+        kinship1:Ross ;
+    kinship1:has_Sister kinship1:Eric,
+        kinship1:Joey,
+        kinship1:Monica,
+        kinship1:Phoebe,
+        kinship1:Ross ;
+    kinship1:has_Son kinship1:Monica,
+        kinship1:Phoebe ;
+    kinship1:has_Uncle kinship1:Joey ;
+    kinship1:has_daughter kinship1:Monica,
+        kinship1:Phoebe ;
+    kinship1:has_parent kinship1:Mrs._Bing ;
+    rdfs:domain kinship1:man,
+        kinship1:woman .
+
+kinship1:Monica kinship1:has_Brother kinship1:Angela,
+        kinship1:Chandler,
+        kinship1:Frannie,
+        kinship1:Joey,
+        kinship1:Paul,
+        kinship1:Phoebe,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Child kinship1:Chandler,
+        kinship1:Joey,
+        kinship1:Mr._Geller,
+        kinship1:Phoebe,
+        kinship1:Rachel ;
+    kinship1:has_Children kinship1:Phoebe ;
+    kinship1:has_Cousin kinship1:Chandler,
+        kinship1:Ross ;
+    kinship1:has_Dad kinship1:Chandler,
+        kinship1:Phoebe,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Father kinship1:Chandler,
+        kinship1:Ross ;
+    kinship1:has_Mom kinship1:Chandler,
+        kinship1:Phoebe ;
+    kinship1:has_Mother kinship1:Chandler,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Parents kinship1:Chandler,
+        kinship1:Joey,
+        kinship1:Mrs._Geller,
+        kinship1:Phoebe,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Sibling kinship1:Phoebe,
+        kinship1:Richard,
+        kinship1:Ross ;
+    kinship1:has_Sister kinship1:Phoebe,
+        kinship1:Ross ;
+    kinship1:has_Son kinship1:Chandler,
+        kinship1:Joey,
+        kinship1:Mr._Geller,
+        kinship1:Phoebe,
+        kinship1:Rachel ;
+    kinship1:has_daughter kinship1:Chandler,
+        kinship1:Joey,
+        kinship1:Mr._Geller,
+        kinship1:Phoebe,
+        kinship1:Rachel ;
+    kinship1:has_parent kinship1:Phoebe,
+        kinship1:Ross ;
+    rdfs:domain kinship1:man,
+        kinship1:woman .
+
+kinship1:Rachel kinship1:has_Aunt kinship1:Ross ;
+    kinship1:has_Brother kinship1:Joey,
+        kinship1:Monica,
+        kinship1:Phoebe,
+        kinship1:Ross ;
+    kinship1:has_Child kinship1:Chandler,
+        kinship1:Janice,
+        kinship1:Joey,
+        kinship1:Monica,
+        kinship1:Paul,
+        kinship1:Phoebe,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Dad kinship1:Monica,
+        kinship1:Phoebe,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Father kinship1:Joey,
+        kinship1:Monica,
+        kinship1:Rachel,
+        kinship1:Ross,
+        kinship1:Terry ;
+    kinship1:has_Mom kinship1:Monica,
+        kinship1:Mrs._Green,
+        kinship1:Phoebe,
+        kinship1:Ross ;
+    kinship1:has_Mother kinship1:Joey,
+        kinship1:Monica,
+        kinship1:Phoebe,
+        kinship1:Ross ;
+    kinship1:has_Niece kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Parents kinship1:Chandler,
+        kinship1:Monica ;
+    kinship1:has_Sibling kinship1:Danny,
+        kinship1:Joey,
+        kinship1:Monica,
+        kinship1:Phoebe,
+        kinship1:Ross,
+        kinship1:Tag ;
+    kinship1:has_Sister kinship1:All,
+        kinship1:Jill,
+        kinship1:Joey,
+        kinship1:Monica,
+        kinship1:Phoebe,
+        kinship1:Ross ;
+    kinship1:has_Sisters kinship1:Ben ;
+    kinship1:has_Son kinship1:Chandler,
+        kinship1:Monica,
+        kinship1:Paul,
+        kinship1:Phoebe,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_daughter kinship1:Chandler,
+        kinship1:Monica,
+        kinship1:Phoebe,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_parent kinship1:Ross ;
+    rdfs:domain kinship1:man,
+        kinship1:woman .
+
+kinship1:Phoebe kinship1:has_Aunt kinship1:Mary,
+        kinship1:Rachel ;
+    kinship1:has_Brother kinship1:Chandler,
+        kinship1:Frank,
+        kinship1:Joey,
+        kinship1:Monica,
+        kinship1:Nurse,
+        kinship1:Pete,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Child <http://www.semanticweb.org/combots#Frank_Sr.>,
+        kinship1:Monica,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Children kinship1:Ross ;
+    kinship1:has_Cousin kinship1:Chandler ;
+    kinship1:has_Dad kinship1:All,
+        kinship1:Chandler,
+        kinship1:Rachel ;
+    kinship1:has_Dauter <http://www.semanticweb.org/combots#Frank_Sr.>,
+        kinship1:Ross ;
+    kinship1:has_Father kinship1:Chandler,
+        kinship1:Monica,
+        kinship1:Ross ;
+    kinship1:has_Mom kinship1:Alice,
+        kinship1:Chandler,
+        kinship1:Earl,
+        kinship1:Frank,
+        kinship1:Joey,
+        kinship1:Monica,
+        kinship1:Phoebe,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Mother kinship1:Carol,
+        kinship1:Chandler,
+        kinship1:Earl,
+        kinship1:Monica,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Parents kinship1:Ben,
+        kinship1:Phoebe_Sr,
+        kinship1:Ross,
+        kinship1:The_Teacher ;
+    kinship1:has_Sibling kinship1:Eric,
+        kinship1:Frank,
+        kinship1:Rachel,
+        kinship1:Ross,
+        kinship1:Ursula ;
+    kinship1:has_Sister kinship1:Chandler,
+        kinship1:Eric,
+        kinship1:Malcom,
+        kinship1:Monica,
+        kinship1:Rachel,
+        kinship1:Ross,
+        kinship1:Ursula ;
+    kinship1:has_Son kinship1:Monica,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_daughter kinship1:Monica,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_parent kinship1:Ross ;
+    kinship1:has_twin kinship1:Malcom ;
+    rdfs:domain kinship1:man,
+        kinship1:woman .
+
+kinship1:Ross kinship1:has_Brother kinship1:Chandler,
+        kinship1:Joey,
+        kinship1:Monica,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Child kinship1:Chandler,
+        kinship1:Elizabeth,
+        kinship1:Joey,
+        kinship1:Monica,
+        kinship1:Mrs._Geller,
+        ns1:s_Daughter,
+        kinship1:Phoebe,
+        kinship1:Rachel ;
+    kinship1:has_Cousin kinship1:Chandler,
+        kinship1:Monica ;
+    kinship1:has_Dad kinship1:Chandler,
+        kinship1:Emily,
+        kinship1:Joey,
+        kinship1:Monica,
+        kinship1:Mr._Geller,
+        kinship1:Phoebe ;
+    kinship1:has_Dauter kinship1:Mr._Waltham,
+        kinship1:Rachel ;
+    kinship1:has_Father kinship1:Mr._Geller,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Mom kinship1:Chandler,
+        kinship1:Phoebe ;
+    kinship1:has_Mother kinship1:Phoebe,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Parents kinship1:Chandler,
+        kinship1:Joey ;
+    kinship1:has_Sibling kinship1:Joey,
+        kinship1:Monica,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Sister kinship1:All,
+        kinship1:Chandler,
+        kinship1:Dr._Leedbetter,
+        kinship1:Emily,
+        kinship1:Janine,
+        kinship1:Joey,
+        kinship1:Monica,
+        kinship1:Phoebe,
+        kinship1:Rachel,
+        kinship1:Ross ;
+    kinship1:has_Son kinship1:All,
+        kinship1:Ben,
+        kinship1:Chandler,
+        kinship1:Emily,
+        kinship1:Joey,
+        kinship1:Katie,
+        kinship1:Monica,
+        kinship1:Phoebe,
+        kinship1:Rachel,
+        kinship1:Ross,
+        kinship1:Susan ;
+    kinship1:has_Uncle kinship1:Carol,
+        kinship1:Phoebe ;
+    kinship1:has_daughter kinship1:Chandler,
+        kinship1:Joey,
+        kinship1:Rachel ;
+    kinship1:has_parent kinship1:Rachel,
+        kinship1:Ross ;
+    rdfs:domain kinship1:man,
+        kinship1:woman .
+
+[] a owl:Ontology .
+

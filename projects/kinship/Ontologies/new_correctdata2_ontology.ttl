@@ -1,0 +1,68 @@
+@prefix kinship1: <http://www.semanticweb.org/combots#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+kinship1:has_Child a kinship1:IrreflexiveProperty .
+
+kinship1:has_Sibling a kinship1:SymmetricProperty .
+
+kinship1:has_daughter a kinship1:IrreflexiveProperty .
+
+kinship1:has_parent a kinship1:IrreflexiveProperty .
+
+kinship1:Ben kinship1:has_parent kinship1:Ross ;
+    rdfs:domain kinship1:man .
+
+kinship1:Chandler kinship1:has_parent kinship1:Mrs._Bing ;
+    rdfs:domain kinship1:man .
+
+kinship1:Jill kinship1:has_Sibling kinship1:Rachel ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Mr._Geller kinship1:has_Child kinship1:Ross ;
+    kinship1:has_Son kinship1:Ross ;
+    rdfs:domain kinship1:man .
+
+kinship1:Mrs._Bing kinship1:has_Son kinship1:Chandler .
+
+kinship1:Rachel kinship1:has_Sister kinship1:Jill .
+
+kinship1:Tina kinship1:has_Brother kinship1:Joey ;
+    kinship1:has_Sibling kinship1:Joey ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Dina kinship1:has_Brother kinship1:Joey ;
+    kinship1:has_Sibling kinship1:Joey ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Frank kinship1:has_Sibling kinship1:Phoebe ;
+    kinship1:has_Sister kinship1:Phoebe ;
+    rdfs:domain kinship1:man .
+
+kinship1:Monica kinship1:has_Brother kinship1:Ross ;
+    kinship1:has_Sibling kinship1:Ross ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Ursula kinship1:has_Sibling kinship1:Phoebe ;
+    kinship1:has_Sister kinship1:Phoebe ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Joey kinship1:has_Sibling kinship1:Dina ;
+    kinship1:has_Sister kinship1:Dina,
+        kinship1:Tina ;
+    rdfs:domain kinship1:man .
+
+kinship1:Phoebe kinship1:has_Brother kinship1:Frank ;
+    kinship1:has_Sibling kinship1:Frank,
+        kinship1:Ursula ;
+    kinship1:has_Sister kinship1:Ursula ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Ross kinship1:has_Father kinship1:Mr._Geller ;
+    kinship1:has_Sibling kinship1:Monica ;
+    kinship1:has_Sister kinship1:Monica ;
+    kinship1:has_Son kinship1:Ben ;
+    rdfs:domain kinship1:man .
+
+[] a owl:Ontology .
+

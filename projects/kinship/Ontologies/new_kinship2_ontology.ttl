@@ -1,0 +1,854 @@
+@prefix : <http://www.semanticweb.org/selin/ontologies/2020/10/kinship1> .
+@prefix kinship1: <http://www.semanticweb.org/selin/ontologies/2020/10/kinship1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+: a owl:Ontology .
+
+kinship1:Andrea_Waltham a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    kinship1:has_Daughter kinship1:Emily_Waltham .
+
+kinship1:Brother_in_law a owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Brother in law"@en ;
+    rdfs:domain kinship1:man ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:In_law ;
+    owl:propertyDisjointWith kinship1:Sister_in_law .
+
+kinship1:Cousins_husband a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Cousins husband"@en ;
+    rdfs:domain kinship1:man ;
+    rdfs:range kinship1:Human ;
+    owl:propertyDisjointWith kinship1:Cousins_wife .
+
+kinship1:Daugther_in_law a owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Daughter in law"@en ;
+    rdfs:domain kinship1:woman ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:In_law ;
+    owl:inverseOf kinship1:Father_in_law,
+        kinship1:Mother_in_law ;
+    owl:propertyDisjointWith kinship1:Son_in_law .
+
+kinship1:First_cousin_once_removed a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "First cousin once removed"@en ;
+    rdfs:comment "Child of your first Cousin."@en ;
+    rdfs:domain kinship1:Human ;
+    rdfs:range kinship1:Human .
+
+kinship1:Grand_nephew a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "grand nephew"@en ;
+    rdfs:domain kinship1:man ;
+    rdfs:range kinship1:Human ;
+    owl:propertyDisjointWith kinship1:Grand_niece .
+
+kinship1:Great_aunt a owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Great aunt"@en ;
+    rdfs:comment "Sister of a Grandparent."@en ;
+    rdfs:domain kinship1:woman ;
+    rdfs:range kinship1:Human ;
+    owl:propertyDisjointWith kinship1:Great_uncle .
+
+kinship1:Great_grandfather a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Great grandfather"@en ;
+    rdfs:comment "The Father of your Grandfather."@en ;
+    rdfs:domain kinship1:man ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:Great_grandparents ;
+    owl:propertyDisjointWith kinship1:Great_grandmother .
+
+kinship1:Helena_Handbasket a kinship1:Human,
+        owl:NamedIndividual .
+
+kinship1:Nephew a owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Nephew"@en ;
+    rdfs:domain kinship1:man ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:has_Cousin ;
+    owl:propertyDisjointWith kinship1:Niece .
+
+kinship1:Stephen_Waltham a kinship1:Human,
+        kinship1:man,
+        owl:NamedIndividual ;
+    kinship1:has_Daughter kinship1:Emily_Waltham .
+
+kinship1:Uncle a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Uncle"@en ;
+    rdfs:domain kinship1:man ;
+    rdfs:range kinship1:Human ;
+    owl:propertyDisjointWith kinship1:has_Aunt .
+
+kinship1:axiom a owl:AnnotationProperty .
+
+kinship1:friday a owl:Class ;
+    rdfs:label "Friday"@en ;
+    rdfs:comment "The Class of all calandar Fridays."@en ;
+    rdfs:subClassOf kinship1:day .
+
+kinship1:has_Brother a owl:IrreflexiveProperty,
+        owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "Brother"@en ;
+    rdfs:comment """owl:comment "The general relationship of being a brother. (brother ?MAN ?PERSON)
+means that ?MAN is the brother of ?PERSON."@en"""@en ;
+    rdfs:domain kinship1:man ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:has_Sibling ;
+    owl:propertyDisjointWith kinship1:has_Sister .
+
+kinship1:has_Daughter a owl:AsymmetricProperty,
+        owl:FunctionalProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Daughter"@en ;
+    rdfs:domain kinship1:woman ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:has_Child ;
+    owl:propertyDisjointWith kinship1:has_Son .
+
+kinship1:has_Ex_husband a owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ex husband" ;
+    rdfs:domain kinship1:man ;
+    rdfs:range kinship1:Human ;
+    owl:propertyDisjointWith kinship1:has_Ex_wife .
+
+kinship1:has_Granddaughter a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Granddaughter"@en ;
+    rdfs:domain kinship1:woman ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:has_Grandchild ;
+    owl:propertyDisjointWith kinship1:has_Grandson .
+
+kinship1:has_Grandfather a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Grandfather"@en ;
+    rdfs:domain kinship1:man ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:has_Grandparent ;
+    owl:propertyDisjointWith kinship1:has_Grandmother .
+
+kinship1:has_Husband a owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Husband"@en ;
+    rdfs:domain kinship1:man ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:has_Spouse ;
+    owl:propertyDisjointWith kinship1:has_Wife .
+
+kinship1:has_Partner a owl:IrreflexiveProperty,
+        owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "Partner"@en ;
+    rdfs:domain kinship1:Human ;
+    rdfs:range kinship1:Human ;
+    owl:equivalentProperty kinship1:has_Spouse .
+
+kinship1:has_age a owl:ObjectProperty ;
+    rdfs:label "age"@en .
+
+kinship1:has_ancestor a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "ancestor"@en ;
+    rdfs:comment """The transitive closure of the parent predicate. (ancestor ?DESCENDANT
+?ANCESTOR) means that ?ANCESTOR is either the parent of ?DESCENDANT or
+the parent of the parent of DESCENDANT or etc."""@en ;
+    rdfs:domain kinship1:Human ;
+    rdfs:range kinship1:Human .
+
+kinship1:has_birthdate a owl:ObjectProperty ;
+    rdfs:label "birthdate"@en ;
+    rdfs:comment """(birthdate ?PERSON ?DAY) means that ?DAY is the Day on which the
+?PERSON was born."""@en ;
+    rdfs:domain kinship1:Human ;
+    rdfs:range kinship1:day .
+
+kinship1:has_daughter a kinship1:IrreflexiveProperty .
+
+kinship1:has_twin a owl:IrreflexiveProperty,
+        owl:ObjectProperty,
+        owl:SymmetricProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "twin"@en ;
+    rdfs:domain kinship1:Human ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:has_Sibling .
+
+kinship1:hour a owl:Class ;
+    rdfs:label "hour"@en ;
+    rdfs:comment "The Class of all clock Hours."@en ;
+    rdfs:subClassOf kinship1:time_interval .
+
+kinship1:human_adult a owl:Class ;
+    rdfs:label "human adult"@en ;
+    rdfs:comment "The class of Humans that are 18 years of age or older."@en ;
+    rdfs:subClassOf kinship1:Human .
+
+kinship1:human_baby a owl:Class ;
+    rdfs:label "human baby"@en ;
+    rdfs:comment "A Human between birth and the first year of age."@en ;
+    rdfs:subClassOf kinship1:human_child .
+
+kinship1:minute a owl:Class ;
+    rdfs:label "minute"@en ;
+    rdfs:comment "The Class of all clock Minutes."@en ;
+    rdfs:subClassOf kinship1:time_interval .
+
+kinship1:monday a owl:Class ;
+    rdfs:label "Monday"@en ;
+    rdfs:comment "The Class of all calandar Mondays."@en ;
+    rdfs:subClassOf kinship1:day .
+
+kinship1:month a owl:Class ;
+    rdfs:label "month"@en ;
+    rdfs:comment "The Class of all calendar Months."@en ;
+    rdfs:subClassOf kinship1:time_interval .
+
+kinship1:nephew_in_law a owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Nephew in law"@en ;
+    rdfs:domain kinship1:man ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:In_law ;
+    owl:propertyDisjointWith kinship1:niece_in_law .
+
+kinship1:saturday a owl:Class ;
+    rdfs:label "Saturday"@en ;
+    rdfs:comment "The Class of all calandar Saturday."@en ;
+    rdfs:subClassOf kinship1:day .
+
+kinship1:season_of_year a owl:Class ;
+    rdfs:label "seasons of year"@en ;
+    rdfs:comment """SeasonOfYear is the class of four seasons correlated with the calendar
+Year and associated with changes in the length of daylight and with
+overall temperature changes. Depending upon the GeographicArea, a
+SeasonOfYear may also be associated with weather patterns (e.g.,
+rainy, dry, windy). The characteristics of seasons (cold vs. hot
+temperatures, long vs. short days) are reversed from the
+NorthernHemisphere to the SouthernHemisphere."""@en ;
+    rdfs:subClassOf kinship1:time_interval .
+
+kinship1:second a owl:Class ;
+    rdfs:label "second"@en ;
+    rdfs:comment "The Class of all clock Seconds."@en ;
+    rdfs:subClassOf kinship1:time_interval .
+
+kinship1:sunday a owl:Class ;
+    rdfs:label "Sunday"@en ;
+    rdfs:comment "The Class of all calandar Sundays."@en ;
+    rdfs:subClassOf kinship1:day .
+
+kinship1:teenager a owl:Class ;
+    rdfs:label "teenager"@en ;
+    rdfs:comment "A HumanYouth between puberty and the age of 20."@en ;
+    rdfs:subClassOf kinship1:human_youth .
+
+kinship1:thursday a owl:Class ;
+    rdfs:label "Thursday"@en ;
+    rdfs:comment "The Class of all calandar Thursdays."@en ;
+    rdfs:subClassOf kinship1:day .
+
+kinship1:tuesday a owl:Class ;
+    rdfs:label "Tuesday"@en ;
+    rdfs:comment "The Class of all calandar Tuesdays."@en ;
+    rdfs:subClassOf kinship1:day .
+
+kinship1:wednesday a owl:Class ;
+    rdfs:label "Wednesday"@en ;
+    rdfs:comment "The Class of all calandar Wednesdays."@en ;
+    rdfs:subClassOf kinship1:day .
+
+kinship1:week a owl:Class ;
+    rdfs:label "week"@en ;
+    rdfs:comment "The Class of all calander Weeks"@en ;
+    rdfs:subClassOf kinship1:time_interval .
+
+kinship1:weekend a owl:Class ;
+    rdfs:label "Any Saturday and Sunday which are contiguous."@en,
+        "weekend"@en ;
+    rdfs:subClassOf kinship1:time_interval .
+
+kinship1:year a owl:Class ;
+    rdfs:label "year"@en ;
+    rdfs:subClassOf kinship1:time_interval .
+
+kinship1:Bitsy_Hannigan a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    kinship1:has_Child kinship1:Mike_Hannigan ;
+    kinship1:has_Son kinship1:Mike_Hannigan .
+
+kinship1:Charles_Bing a kinship1:Human,
+        kinship1:man,
+        owl:NamedIndividual ;
+    kinship1:has_Child kinship1:Chandler_Bing ;
+    kinship1:has_Son kinship1:Chandler_Bing ;
+    rdfs:domain kinship1:man .
+
+kinship1:Cookie a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    kinship1:has_Sibling kinship1:Joey_Tribbiani ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Cousins_wife a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Cousins wife"@en ;
+    rdfs:domain kinship1:woman ;
+    rdfs:range kinship1:Human .
+
+kinship1:Duncan a kinship1:Human,
+        kinship1:man,
+        owl:NamedIndividual ;
+    kinship1:has_Ex_wife kinship1:Phoebe ;
+    rdfs:domain kinship1:man .
+
+kinship1:Emma a kinship1:Human,
+        kinship1:girl,
+        kinship1:woman,
+        owl:NamedIndividual .
+
+kinship1:Father_in_law a owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Father in law"@en ;
+    rdfs:domain kinship1:man ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:In_law ;
+    owl:inverseOf kinship1:Son_in_law ;
+    owl:propertyDisjointWith kinship1:Mother_in_law .
+
+kinship1:Frances a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Gina a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    kinship1:has_Sibling kinship1:Joey_Tribbiani ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Gloria_Tribbiani a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    kinship1:has_Child kinship1:Joey_Tribbiani ;
+    kinship1:has_Son kinship1:Joey_Tribbiani .
+
+kinship1:Grand_niece a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "grand niece"@en ;
+    rdfs:domain kinship1:woman ;
+    rdfs:range kinship1:Human .
+
+kinship1:Great_grandmother a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Great grandmother"@en ;
+    rdfs:comment "The Mother of your Grandmother."@en ;
+    rdfs:domain kinship1:woman ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:Great_grandparents .
+
+kinship1:Great_uncle a owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Great uncle"@en ;
+    rdfs:comment "Brother of a grandparent"@en ;
+    rdfs:domain kinship1:man ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+kinship1:Joseph_Tribbiani a kinship1:Human,
+        kinship1:man,
+        owl:NamedIndividual ;
+    kinship1:has_Child kinship1:Joey_Tribbiani ;
+    kinship1:has_Son kinship1:Joey_Tribbiani .
+
+kinship1:Leonard_Green a kinship1:Human,
+        kinship1:man,
+        owl:NamedIndividual ;
+    kinship1:has_Child kinship1:Rachel ;
+    kinship1:has_daughter kinship1:Rachel ;
+    rdfs:domain kinship1:man .
+
+kinship1:Mary_Therese_Tribbiani a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    kinship1:has_Sibling kinship1:Joey_Tribbiani ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Niece a owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Niece"@en ;
+    rdfs:domain kinship1:woman ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:has_Cousin .
+
+kinship1:Phoebe_Abbott a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    rdfs:label "Phoebe Abbott"@en ;
+    kinship1:has_Child kinship1:Phoebe ;
+    kinship1:has_daughter kinship1:Phoebe ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Sandra_Green a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    kinship1:has_Child kinship1:Rachel ;
+    kinship1:has_daughter kinship1:Rachel ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Sister_in_law a owl:ObjectProperty ;
+    rdfs:label "Sister in law"@en ;
+    rdfs:domain kinship1:woman ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:In_law .
+
+kinship1:Susan_Bunch a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    kinship1:has_Husband kinship1:Carol_Willick ;
+    kinship1:has_Partner kinship1:Carol_Willick ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Theodore_Hannigan a kinship1:Human,
+        kinship1:man,
+        owl:NamedIndividual ;
+    kinship1:has_Child kinship1:Mike_Hannigan ;
+    kinship1:has_Son kinship1:Mike_Hannigan .
+
+kinship1:Tina a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    kinship1:has_Sibling kinship1:Joey_Tribbiani ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Ursula_Buffay a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual .
+
+kinship1:Veronica a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    kinship1:has_Sibling kinship1:Joey_Tribbiani ;
+    rdfs:domain kinship1:woman .
+
+kinship1:boy a owl:Class ;
+    rdfs:label "boy"@en ;
+    rdfs:comment "A HumanChild who is Male."@en ;
+    rdfs:subClassOf kinship1:human_child,
+        kinship1:man ;
+    owl:disjointWith kinship1:girl .
+
+kinship1:has_Aunt a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "aunt"@en ;
+    rdfs:domain kinship1:woman ;
+    rdfs:range kinship1:Human .
+
+kinship1:has_Ex_wife a owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ex wife" ;
+    rdfs:domain kinship1:woman ;
+    rdfs:range kinship1:Human .
+
+kinship1:has_Father a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Father"@en ;
+    rdfs:domain kinship1:man ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:has_parent ;
+    owl:propertyDisjointWith kinship1:has_Mother .
+
+kinship1:has_Grandmother a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "grandmother"@en ;
+    rdfs:domain kinship1:woman ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:has_Grandparent .
+
+kinship1:has_Grandson a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Grandson"@en ;
+    rdfs:domain kinship1:man ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:has_Grandchild .
+
+kinship1:has_Sister a owl:IrreflexiveProperty,
+        owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "sister"@en ;
+    rdfs:comment """owl:comment "The general relationship of being a sister. (sister ?WOMAN ?PERSON)
+means that ?WOMAN is the sister of ?PERSON."@en"""@en ;
+    rdfs:domain kinship1:woman ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:has_Sibling .
+
+kinship1:has_Son a owl:AsymmetricProperty,
+        owl:FunctionalProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Son"@en ;
+    rdfs:domain kinship1:man ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:has_Child .
+
+kinship1:has_Wife a owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Wife"@en ;
+    rdfs:comment "I AM NOT SURE WHETHER THIS RELATION SHOULD BE INVERSE OR DISJOINT, SINCE THE RELATION WILL NOT ALWAY BE HUSBAND AND WIFE"@en ;
+    rdfs:domain kinship1:woman ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:has_Spouse .
+
+kinship1:niece_in_law a owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Niece in law"@en ;
+    rdfs:domain kinship1:woman ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:In_law .
+
+kinship1:time_measure a owl:Class ;
+    rdfs:label "time measure"@en ;
+    rdfs:comment """The class of temporal durations (instances of TimeDuration) and
+positions of TimePoints and TimeIntervals along the universal timeline
+(instances of TimePosition)."""@en .
+
+kinship1:time_position a owl:Class ;
+    rdfs:label "time position"@en ;
+    rdfs:comment """Any TimePoint or TimeInterval along the universal timeline from
+NegativeInfinity to PositiveInfinity."""@en ;
+    rdfs:subClassOf kinship1:time_measure .
+
+kinship1:Alice_Knight a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    kinship1:has_Husband kinship1:Frank_Buffay ;
+    kinship1:has_Partner kinship1:Frank_Buffay ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Cassie_Geller a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    kinship1:has_Cousin kinship1:Monica,
+        kinship1:Ross .
+
+kinship1:Dina a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    kinship1:has_Sibling kinship1:Joey_Tribbiani,
+        kinship1:Mary_Angela_Tribbiani ;
+    kinship1:has_Sister kinship1:Mary_Angela_Tribbiani ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Great_grandparents a owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Great grandparents"@en ;
+    rdfs:comment "The Parents of your Grandparents."@en ;
+    rdfs:domain kinship1:Human ;
+    rdfs:range kinship1:Human .
+
+kinship1:Jill_Green a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    kinship1:has_Sibling kinship1:Amy_Green,
+        kinship1:Rachel ;
+    kinship1:has_Sister kinship1:Amy_Green,
+        kinship1:Rachel ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Mother_in_law a owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Mother in law"@en ;
+    rdfs:domain kinship1:woman ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:In_law ;
+    owl:inverseOf kinship1:Son_in_law .
+
+kinship1:Nora_Tyler_Bing a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    kinship1:has_Child kinship1:Chandler_Bing ;
+    kinship1:has_Son kinship1:Chandler_Bing ;
+    rdfs:domain kinship1:woman .
+
+kinship1:girl a owl:Class ;
+    rdfs:label "girl"@en ;
+    rdfs:comment "A HumanChild who is Female."@en ;
+    rdfs:subClassOf kinship1:human_child,
+        kinship1:woman .
+
+kinship1:has_Child a kinship1:IrreflexiveProperty,
+        owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Child"@en ;
+    rdfs:domain kinship1:Human ;
+    rdfs:range kinship1:Human ;
+    owl:inverseOf kinship1:has_Father,
+        kinship1:has_Mother,
+        kinship1:has_parent .
+
+kinship1:has_Cousin a owl:IrreflexiveProperty,
+        owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "Cousin"@en ;
+    rdfs:domain kinship1:Human ;
+    rdfs:range kinship1:Human .
+
+kinship1:has_Grandchild a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Grandchild"@en ;
+    rdfs:domain kinship1:Human ;
+    rdfs:range kinship1:Human ;
+    owl:inverseOf kinship1:has_Grandparent .
+
+kinship1:has_Mother a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Mother"@en ;
+    rdfs:domain kinship1:woman ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:has_parent .
+
+kinship1:human_youth a owl:Class ;
+    rdfs:subClassOf kinship1:Human .
+
+kinship1:Ben a kinship1:Human,
+        kinship1:boy,
+        kinship1:man,
+        owl:NamedIndividual ;
+    kinship1:has_Father kinship1:Ross ;
+    kinship1:has_parent kinship1:Carol_Willick,
+        kinship1:Ross ;
+    rdfs:domain kinship1:man .
+
+kinship1:Emily_Waltham a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    kinship1:has_Ex_husband kinship1:Ross ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Frank_Buffay a kinship1:Human,
+        kinship1:man,
+        owl:NamedIndividual ;
+    rdfs:label "Frank Buffay" ;
+    kinship1:has_Partner kinship1:Alice_Knight ;
+    kinship1:has_Sibling kinship1:Phoebe ;
+    kinship1:has_Sister kinship1:Phoebe ;
+    kinship1:has_Wife kinship1:Alice_Knight ;
+    rdfs:domain kinship1:man .
+
+kinship1:Jack_Geller a kinship1:Human,
+        kinship1:man,
+        owl:NamedIndividual ;
+    kinship1:has_Child kinship1:Monica,
+        kinship1:Ross ;
+    kinship1:has_Partner kinship1:Judy_Geller ;
+    kinship1:has_Son kinship1:Ross ;
+    kinship1:has_daughter kinship1:Monica ;
+    rdfs:domain kinship1:man .
+
+kinship1:Judy_Geller a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    kinship1:has_Child kinship1:Monica,
+        kinship1:Ross ;
+    kinship1:has_Partner kinship1:Jack_Geller ;
+    kinship1:has_Son kinship1:Ross ;
+    kinship1:has_daughter kinship1:Monica ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Mary_Angela_Tribbiani a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    kinship1:has_Sibling kinship1:Joey_Tribbiani ;
+    kinship1:has_Sister kinship1:Dina ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Son_in_law a owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Son in law"@en ;
+    rdfs:domain kinship1:man ;
+    rdfs:range kinship1:Human ;
+    rdfs:subPropertyOf kinship1:In_law .
+
+kinship1:has_Grandparent a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Grandparent"@en ;
+    rdfs:domain kinship1:Human ;
+    rdfs:range kinship1:Human .
+
+kinship1:has_Sibling a kinship1:SymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty,
+        owl:SymmetricProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "sibiling"@en ;
+    rdfs:comment """owl:comment "The relationship between two Organisms that have the same mother and
+father. Note that this relationship does not hold between
+half-brothers, half-sisters, etc."@en"""@en ;
+    rdfs:domain kinship1:Human ;
+    rdfs:range kinship1:Human .
+
+kinship1:has_Spouse a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "Spouse"@en ;
+    rdfs:domain kinship1:Human ;
+    rdfs:range kinship1:Human .
+
+kinship1:has_parent a kinship1:IrreflexiveProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "parent"@en ;
+    rdfs:comment """The general relationship of parenthood. (parent ?CHILD ?PARENT) means
+that ?PARENT is a biological parent of ?CHILD."""@en ;
+    rdfs:domain kinship1:Human ;
+    rdfs:range kinship1:Human .
+
+kinship1:human_child a owl:Class ;
+    rdfs:subClassOf kinship1:human_youth .
+
+kinship1:Amy_Green a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    kinship1:has_Sibling kinship1:Rachel ;
+    kinship1:has_Sister kinship1:Jill_Green,
+        kinship1:Rachel ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Carol_Willick a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    kinship1:has_Ex_husband kinship1:Ross ;
+    kinship1:has_Son kinship1:Ben ;
+    kinship1:has_Wife kinship1:Susan_Bunch ;
+    rdfs:domain kinship1:woman .
+
+kinship1:Chandler_Bing a kinship1:Human,
+        kinship1:man,
+        owl:NamedIndividual ;
+    rdfs:label "Chandler Bing" ;
+    kinship1:has_Father kinship1:Charles_Bing ;
+    kinship1:has_Mother kinship1:Nora_Tyler_Bing ;
+    kinship1:has_parent kinship1:Nora_Tyler_Bing .
+
+kinship1:Mike_Hannigan a kinship1:Human,
+        kinship1:man,
+        owl:NamedIndividual ;
+    kinship1:has_Partner kinship1:Phoebe ;
+    kinship1:has_Wife kinship1:Phoebe ;
+    kinship1:has_parent kinship1:Bitsy_Hannigan,
+        kinship1:Theodore_Hannigan ;
+    rdfs:domain kinship1:man .
+
+kinship1:Monica a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    rdfs:label "Monica"@en ;
+    kinship1:has_Cousin kinship1:Cassie_Geller ;
+    kinship1:has_Father kinship1:Jack_Geller ;
+    kinship1:has_Mother kinship1:Judy_Geller ;
+    kinship1:has_Sibling kinship1:Ross .
+
+kinship1:Phoebe a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    kinship1:has_Brother kinship1:Frank_Buffay ;
+    kinship1:has_Ex_husband kinship1:Duncan ;
+    kinship1:has_Grandmother kinship1:Frances ;
+    kinship1:has_Husband kinship1:Mike_Hannigan ;
+    kinship1:has_Mother kinship1:Phoebe_Abbott ;
+    kinship1:has_twin kinship1:Ursula_Buffay .
+
+kinship1:In_law a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "In law"@en ;
+    rdfs:comment "NOT SURE IF I SHOULD PUT ALL THESE RELATIONS IN THE SUBCLASS RELATION"@en ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+kinship1:Rachel a kinship1:Human,
+        kinship1:woman,
+        owl:NamedIndividual ;
+    rdfs:label "Rachel"@en ;
+    kinship1:has_Daughter kinship1:Emma ;
+    kinship1:has_Father kinship1:Leonard_Green ;
+    kinship1:has_Mother kinship1:Sandra_Green ;
+    kinship1:has_Sibling kinship1:Amy_Green ;
+    kinship1:has_Sister kinship1:Amy_Green,
+        kinship1:Jill_Green ;
+    rdfs:domain kinship1:woman .
+
+kinship1:day a owl:Class ;
+    rdfs:label "day"@en ;
+    rdfs:subClassOf kinship1:time_interval .
+
+kinship1:time_interval a owl:Class ;
+    rdfs:label "time interval"@en ;
+    rdfs:subClassOf kinship1:time_position .
+
+kinship1:Ross a kinship1:Human,
+        kinship1:man,
+        owl:NamedIndividual ;
+    kinship1:has_Child kinship1:Ben ;
+    kinship1:has_Cousin kinship1:Cassie_Geller ;
+    kinship1:has_Ex_wife kinship1:Carol_Willick,
+        kinship1:Emily_Waltham ;
+    kinship1:has_Father kinship1:Jack_Geller ;
+    kinship1:has_Mother kinship1:Judy_Geller ;
+    kinship1:has_Sibling kinship1:Monica ;
+    kinship1:has_Son kinship1:Ben ;
+    rdfs:domain kinship1:man .
+
+kinship1:Joey_Tribbiani a kinship1:Human,
+        kinship1:man,
+        owl:NamedIndividual ;
+    rdfs:label "Joey Tribbiani"@en ;
+    kinship1:has_Sister kinship1:Cookie,
+        kinship1:Dina,
+        kinship1:Gina,
+        kinship1:Mary_Angela_Tribbiani,
+        kinship1:Mary_Therese_Tribbiani,
+        kinship1:Tina,
+        kinship1:Veronica ;
+    kinship1:has_parent kinship1:Gloria_Tribbiani,
+        kinship1:Joseph_Tribbiani .
+
+kinship1:man a owl:Class ;
+    rdfs:label "man"@en ;
+    rdfs:subClassOf kinship1:Human ;
+    owl:disjointWith kinship1:woman .
+
+kinship1:woman a owl:Class ;
+    rdfs:subClassOf kinship1:Human .
+
+kinship1:Human a owl:Class ;
+    rdfs:label "human"@en .
+
